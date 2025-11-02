@@ -180,9 +180,17 @@
 }
 
 .mock-stacks-grid .mock-icon {
-  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-bottom: 0.4rem;
-  color: var(--primary-start, #00ffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mock-stacks-grid .mock-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .mock-stacks-grid .mock-name {

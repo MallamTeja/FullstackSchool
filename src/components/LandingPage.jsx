@@ -6,12 +6,18 @@ import AboutSection from './AboutSection';
 import HowItWorks from './HowItWorks';
 import PreviewSection from './PreviewSection';
 
-const LandingPage = () => {
+const LandingPage = ({ setCurrentPage }) => {
   const [email, setEmail] = useState('');
 
   const handleCTA = () => {
     // Scroll to features or redirect to signup
     document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleSkillNavigation = (page) => {
+    if (setCurrentPage) {
+      setCurrentPage(page);
+    }
   };
 
   const handleEmailSubmit = (e) => {
@@ -103,6 +109,120 @@ const LandingPage = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Skills Overview Section */}
+      <section id="skills" className="skills-section">
+        <div className="container">
+          <motion.div 
+            className="skills-header"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2>Explore Technologies by Category</h2>
+            <p>Choose your learning path and discover the technologies that power modern applications</p>
+          </motion.div>
+          
+          <div className="skills-grid">
+            <motion.div 
+              className="skill-category-card"
+              whileHover={{ scale: 1.02, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              onClick={() => handleSkillNavigation('frontend')}
+            >
+              <div className="skill-icon">
+                <i className="fab fa-react"></i>
+              </div>
+              <h3>Frontend Development</h3>
+              <p>React, Vue, Angular, and modern UI/UX technologies</p>
+              <div className="skill-tech-list">
+                <span>React</span>
+                <span>Vue.js</span>
+                <span>Angular</span>
+                <span>TypeScript</span>
+              </div>
+              <button className="skill-explore-btn">Explore Frontend</button>
+            </motion.div>
+
+            <motion.div 
+              className="skill-category-card"
+              whileHover={{ scale: 1.02, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              onClick={() => handleSkillNavigation('backend')}
+            >
+              <div className="skill-icon">
+                <i className="fas fa-server"></i>
+              </div>
+              <h3>Backend Development</h3>
+              <p>Node.js, Python, Java, and server-side technologies</p>
+              <div className="skill-tech-list">
+                <span>Node.js</span>
+                <span>Python</span>
+                <span>Java</span>
+                <span>Express.js</span>
+              </div>
+              <button className="skill-explore-btn">Explore Backend</button>
+            </motion.div>
+
+            <motion.div 
+              className="skill-category-card"
+              whileHover={{ scale: 1.02, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              onClick={() => handleSkillNavigation('database')}
+            >
+              <div className="skill-icon">
+                <i className="fas fa-database"></i>
+              </div>
+              <h3>Database Technologies</h3>
+              <p>SQL, NoSQL, and modern database solutions</p>
+              <div className="skill-tech-list">
+                <span>MongoDB</span>
+                <span>PostgreSQL</span>
+                <span>Redis</span>
+                <span>MySQL</span>
+              </div>
+              <button className="skill-explore-btn">Explore Database</button>
+            </motion.div>
+
+            <motion.div 
+              className="skill-category-card"
+              whileHover={{ scale: 1.02, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              onClick={() => handleSkillNavigation('infrastructure')}
+            >
+              <div className="skill-icon">
+                <i className="fas fa-cloud"></i>
+              </div>
+              <h3>Infrastructure & DevOps</h3>
+              <p>AWS, Docker, Kubernetes, and deployment tools</p>
+              <div className="skill-tech-list">
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>CI/CD</span>
+              </div>
+              <button className="skill-explore-btn">Explore Infrastructure</button>
+            </motion.div>
+          </div>
         </div>
       </section>
 

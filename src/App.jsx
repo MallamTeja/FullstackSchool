@@ -66,7 +66,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <LandingPage />;
+        return <LandingPage setCurrentPage={setCurrentPage} />;
       
       case 'frontend':
       case 'backend':

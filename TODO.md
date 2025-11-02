@@ -1,6 +1,3 @@
-- [x] Update techlist.json to replace FontAwesome icons with original logo URLs using Devicon CDN
-- [x] Modify TechCard.jsx to use <img> instead of <i> for icons
-- [x] Adjust TechCard.css to decrease card sizes (min-height, padding, font sizes)
-- [x] Test the changes by running the app
-
-
+- [x] Update HeroSection.jsx to replace FontAwesome icons with inline SVG logos for MERN (React), MEAN (Angular), Java Stack (Java), and LAMP/LEMP (PHP)
+- [x] Update HeroSection.css to increase icon size and refine layout for professional formatting
+- [ ] Test the landing page for proper display and responsiveness
