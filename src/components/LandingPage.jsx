@@ -35,7 +35,8 @@ const LandingPage = ({ setCurrentPage }) => {
       <PreviewSection />
 
       {/* Problem Section */}
-      <section className="problem-section"        <div className="section-glow" aria-hidden></div>
+      <section className="problem-section">
+        <div className="section-glow" aria-hidden="true"></div>
         <div className="container">
           <motion.div 
             className="problem-content"
@@ -68,7 +69,7 @@ const LandingPage = ({ setCurrentPage }) => {
 
       {/* Solution Section */}
       <section className="solution-section">
-        <div className="section-glow" aria-hidden></div>
+        <div className="section-glow" aria-hidden="true"></div>
         <div className="container">
           <motion.div 
             className="solution-content"
@@ -229,7 +230,7 @@ const LandingPage = ({ setCurrentPage }) => {
 
       {/* Features Section */}
       <section id="features" className="features-section">
-        <div className="section-glow" aria-hidden></div>
+        <div className="section-glow" aria-hidden="true"></div>
         <div className="container">
           <motion.div 
             className="features-header"
@@ -391,19 +392,19 @@ const LandingPage = ({ setCurrentPage }) => {
             <div className="company-logos">
               <h4>Used by developers at</h4>
               <div className="logos-grid">
-                <div className="company-logo" aria-hidden>
+                <div className="company-logo" aria-hidden="true">
                   <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="28" rx="4" fill="#E6EEF8" opacity="0.06"/><text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#94a3b8" fontSize="10">Google</text></svg>
                 </div>
-                <div className="company-logo" aria-hidden>
+                <div className="company-logo" aria-hidden="true">
                   <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="28" rx="4" fill="#E6EEF8" opacity="0.06"/><text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#94a3b8" fontSize="10">Microsoft</text></svg>
                 </div>
-                <div className="company-logo" aria-hidden>
+                <div className="company-logo" aria-hidden="true">
                   <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="28" rx="4" fill="#E6EEF8" opacity="0.06"/><text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#94a3b8" fontSize="10">Amazon</text></svg>
                 </div>
-                <div className="company-logo" aria-hidden>
+                <div className="company-logo" aria-hidden="true">
                   <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="28" rx="4" fill="#E6EEF8" opacity="0.06"/><text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#94a3b8" fontSize="10">Netflix</text></svg>
                 </div>
-                <div className="company-logo" aria-hidden>
+                <div className="company-logo" aria-hidden="true">
                   <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="28" rx="4" fill="#E6EEF8" opacity="0.06"/><text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#94a3b8" fontSize="10">Spotify</text></svg>
                 </div>
               </div>
