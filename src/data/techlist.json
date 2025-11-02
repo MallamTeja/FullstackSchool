@@ -1,0 +1,418 @@
+{
+  "technologies": [
+    {
+      "id": 1,
+      "name": "HTML5",
+      "category": "Frontend",
+      "icon": "fab fa-html5",
+      "desc": "The backbone of web content. Semantic markup that structures your digital masterpiece.",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      "dependencies": [],
+      "leads_to": ["CSS3", "JavaScript"]
+    },
+    {
+      "id": 2,
+      "name": "CSS3",
+      "category": "Frontend",
+      "icon": "fab fa-css3-alt",
+      "desc": "Make it pretty! The magic wand that transforms bland HTML into stunning visual experiences.",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      "dependencies": ["HTML5"],
+      "leads_to": ["Sass", "Tailwind CSS", "Bootstrap"]
+    },
+    {
+      "id": 3,
+      "name": "JavaScript",
+      "category": "Frontend",
+      "icon": "fab fa-js-square",
+      "desc": "The soul of web interactivity. From simple clicks to complex applications - JS does it all!",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "dependencies": ["HTML5"],
+      "leads_to": ["React", "Vue.js", "Node.js", "TypeScript"]
+    },
+    {
+      "id": 4,
+      "name": "React",
+      "category": "Frontend",
+      "icon": "fab fa-react",
+      "desc": "Component-based UI library that makes building interactive UIs as satisfying as LEGO blocks!",
+      "url": "https://reactjs.org/",
+      "dependencies": ["JavaScript"],
+      "leads_to": ["Next.js", "React Native", "Redux"]
+    },
+    {
+      "id": 5,
+      "name": "Vue.js",
+      "category": "Frontend",
+      "icon": "fab fa-vuejs",
+      "desc": "Progressive framework that's approachable, versatile, and performant. Vue makes frontend fun!",
+      "url": "https://vuejs.org/",
+      "dependencies": ["JavaScript"],
+      "leads_to": ["Nuxt.js", "Vuex"]
+    },
+    {
+      "id": 6,
+      "name": "Angular",
+      "category": "Frontend",
+      "icon": "fab fa-angular",
+      "desc": "Full-featured framework for ambitious web apps. TypeScript-first and enterprise-ready!",
+      "url": "https://angular.io/",
+      "dependencies": ["JavaScript", "TypeScript"],
+      "leads_to": ["RxJS", "Angular Material"]
+    },
+    {
+      "id": 7,
+      "name": "TypeScript",
+      "category": "Frontend",
+      "icon": "fas fa-code",
+      "desc": "JavaScript's sophisticated cousin. Type safety that catches bugs before they catch you!",
+      "url": "https://www.typescriptlang.org/",
+      "dependencies": ["JavaScript"],
+      "leads_to": ["Angular", "React", "Node.js"]
+    },
+    {
+      "id": 8,
+      "name": "Sass/SCSS",
+      "category": "Frontend",
+      "icon": "fab fa-sass",
+      "desc": "CSS with superpowers! Variables, nesting, and mixins make styling a breeze.",
+      "url": "https://sass-lang.com/",
+      "dependencies": ["CSS3"],
+      "leads_to": []
+    },
+    {
+      "id": 9,
+      "name": "Tailwind CSS",
+      "category": "Frontend",
+      "icon": "fas fa-wind",
+      "desc": "Utility-first CSS framework. Build beautiful designs without leaving your HTML!",
+      "url": "https://tailwindcss.com/",
+      "dependencies": ["CSS3"],
+      "leads_to": []
+    },
+    {
+      "id": 10,
+      "name": "Bootstrap",
+      "category": "Frontend",
+      "icon": "fab fa-bootstrap",
+      "desc": "Responsive grid system and pre-built components. Rapid prototyping made simple!",
+      "url": "https://getbootstrap.com/",
+      "dependencies": ["CSS3"],
+      "leads_to": []
+    },
+    {
+      "id": 11,
+      "name": "Node.js",
+      "category": "Backend",
+      "icon": "fab fa-node-js",
+      "desc": "JavaScript on the server! Event-driven, non-blocking I/O that scales beautifully.",
+      "url": "https://nodejs.org/",
+      "dependencies": ["JavaScript"],
+      "leads_to": ["Express.js", "NestJS", "Socket.io"]
+    },
+    {
+      "id": 12,
+      "name": "Express.js",
+      "category": "Backend",
+      "icon": "fas fa-server",
+      "desc": "Minimalist web framework for Node.js. Fast, unopinionated, and flexible!",
+      "url": "https://expressjs.com/",
+      "dependencies": ["Node.js"],
+      "leads_to": ["MongoDB", "PostgreSQL", "Authentication"]
+    },
+    {
+      "id": 13,
+      "name": "Python",
+      "category": "Backend",
+      "icon": "fab fa-python",
+      "desc": "Readable, versatile, powerful. From web apps to AI - Python does it elegantly!",
+      "url": "https://www.python.org/",
+      "dependencies": [],
+      "leads_to": ["Django", "Flask", "FastAPI"]
+    },
+    {
+      "id": 14,
+      "name": "Django",
+      "category": "Backend",
+      "icon": "fas fa-code-branch",
+      "desc": "The web framework for perfectionists with deadlines. Batteries included!",
+      "url": "https://www.djangoproject.com/",
+      "dependencies": ["Python"],
+      "leads_to": ["PostgreSQL", "Redis"]
+    },
+    {
+      "id": 15,
+      "name": "Flask",
+      "category": "Backend",
+      "icon": "fas fa-flask",
+      "desc": "Micro framework with macro possibilities. Lightweight and extensible!",
+      "url": "https://flask.palletsprojects.com/",
+      "dependencies": ["Python"],
+      "leads_to": ["SQLAlchemy", "MongoDB"]
+    },
+    {
+      "id": 16,
+      "name": "MongoDB",
+      "category": "Database",
+      "icon": "fas fa-leaf",
+      "desc": "Document-oriented NoSQL database. Flexible schemas for modern applications!",
+      "url": "https://www.mongodb.com/",
+      "dependencies": [],
+      "leads_to": ["Mongoose", "Atlas"]
+    },
+    {
+      "id": 17,
+      "name": "PostgreSQL",
+      "category": "Database",
+      "icon": "fas fa-database",
+      "desc": "Advanced open-source relational database. ACID compliance meets JSON flexibility!",
+      "url": "https://www.postgresql.org/",
+      "dependencies": [],
+      "leads_to": ["Prisma", "Sequelize"]
+    },
+    {
+      "id": 18,
+      "name": "MySQL",
+      "category": "Database",
+      "icon": "fas fa-database",
+      "desc": "World's most popular open-source database. Reliable, fast, and battle-tested!",
+      "url": "https://www.mysql.com/",
+      "dependencies": [],
+      "leads_to": ["Sequelize", "TypeORM"]
+    },
+    {
+      "id": 19,
+      "name": "Redis",
+      "category": "Database",
+      "icon": "fas fa-memory",
+      "desc": "In-memory data structure store. Caching, sessions, and real-time analytics!",
+      "url": "https://redis.io/",
+      "dependencies": [],
+      "leads_to": []
+    },
+    {
+      "id": 20,
+      "name": "REST API",
+      "category": "APIs",
+      "icon": "fas fa-exchange-alt",
+      "desc": "Representational State Transfer. Clean, stateless communication between systems!",
+      "url": "https://restfulapi.net/",
+      "dependencies": ["HTTP"],
+      "leads_to": ["GraphQL", "OpenAPI"]
+    },
+    {
+      "id": 21,
+      "name": "GraphQL",
+      "category": "APIs",
+      "icon": "fas fa-project-diagram",
+      "desc": "Query language for APIs. Ask for exactly what you need, nothing more!",
+      "url": "https://graphql.org/",
+      "dependencies": [],
+      "leads_to": ["Apollo", "Relay"]
+    },
+    {
+      "id": 22,
+      "name": "Socket.io",
+      "category": "APIs",
+      "icon": "fas fa-plug",
+      "desc": "Real-time bidirectional event-based communication. WebSockets made simple!",
+      "url": "https://socket.io/",
+      "dependencies": ["Node.js"],
+      "leads_to": []
+    },
+    {
+      "id": 23,
+      "name": "JWT",
+      "category": "Authentication",
+      "icon": "fas fa-key",
+      "desc": "JSON Web Tokens for secure information transmission. Stateless authentication magic!",
+      "url": "https://jwt.io/",
+      "dependencies": [],
+      "leads_to": ["OAuth", "Auth0"]
+    },
+    {
+      "id": 24,
+      "name": "OAuth 2.0",
+      "category": "Authentication",
+      "icon": "fas fa-shield-alt",
+      "desc": "Industry-standard authorization framework. Secure third-party access control!",
+      "url": "https://oauth.net/2/",
+      "dependencies": [],
+      "leads_to": ["OpenID Connect"]
+    },
+    {
+      "id": 25,
+      "name": "AWS",
+      "category": "Cloud & DevOps",
+      "icon": "fab fa-aws",
+      "desc": "Amazon's comprehensive cloud platform. From storage to AI - scale globally!",
+      "url": "https://aws.amazon.com/",
+      "dependencies": [],
+      "leads_to": ["EC2", "S3", "Lambda"]
+    },
+    {
+      "id": 26,
+      "name": "Docker",
+      "category": "Cloud & DevOps",
+      "icon": "fab fa-docker",
+      "desc": "Containerization platform. Package your app with all dependencies - run anywhere!",
+      "url": "https://www.docker.com/",
+      "dependencies": [],
+      "leads_to": ["Kubernetes", "Docker Compose"]
+    },
+    {
+      "id": 27,
+      "name": "Kubernetes",
+      "category": "Cloud & DevOps",
+      "icon": "fas fa-dharmachakra",
+      "desc": "Container orchestration system. Automate deployment, scaling, and management!",
+      "url": "https://kubernetes.io/",
+      "dependencies": ["Docker"],
+      "leads_to": ["Helm", "Istio"]
+    },
+    {
+      "id": 28,
+      "name": "Git",
+      "category": "Version Control",
+      "icon": "fab fa-git-alt",
+      "desc": "Distributed version control system. Track changes, collaborate, never lose code!",
+      "url": "https://git-scm.com/",
+      "dependencies": [],
+      "leads_to": ["GitHub", "GitLab"]
+    },
+    {
+      "id": 29,
+      "name": "GitHub",
+      "category": "Version Control",
+      "icon": "fab fa-github",
+      "desc": "Git repository hosting with collaboration features. Where code lives and thrives!",
+      "url": "https://github.com/",
+      "dependencies": ["Git"],
+      "leads_to": ["GitHub Actions"]
+    },
+    {
+      "id": 30,
+      "name": "GitHub Actions",
+      "category": "CI/CD",
+      "icon": "fas fa-cogs",
+      "desc": "Automate workflows from idea to production. CI/CD made simple and powerful!",
+      "url": "https://github.com/features/actions",
+      "dependencies": ["GitHub"],
+      "leads_to": []
+    },
+    {
+      "id": 31,
+      "name": "Jenkins",
+      "category": "CI/CD",
+      "icon": "fas fa-tools",
+      "desc": "Extensible automation server. Build, test, and deploy with endless plugins!",
+      "url": "https://www.jenkins.io/",
+      "dependencies": [],
+      "leads_to": []
+    },
+    {
+      "id": 32,
+      "name": "Next.js",
+      "category": "Frontend",
+      "icon": "fas fa-forward",
+      "desc": "React framework with server-side rendering. Full-stack React applications made easy!",
+      "url": "https://nextjs.org/",
+      "dependencies": ["React"],
+      "leads_to": ["Vercel"]
+    },
+    {
+      "id": 33,
+      "name": "Vercel",
+      "category": "Deployment",
+      "icon": "fas fa-rocket",
+      "desc": "Deploy frontend apps instantly. Git integration with global edge network!",
+      "url": "https://vercel.com/",
+      "dependencies": [],
+      "leads_to": []
+    },
+    {
+      "id": 34,
+      "name": "Netlify",
+      "category": "Deployment",
+      "icon": "fas fa-globe",
+      "desc": "Build, deploy, and manage modern web projects. JAMstack hosting platform!",
+      "url": "https://www.netlify.com/",
+      "dependencies": [],
+      "leads_to": []
+    },
+    {
+      "id": 35,
+      "name": "Stripe",
+      "category": "Payment Systems",
+      "icon": "fab fa-stripe",
+      "desc": "Online payment processing for internet businesses. Accept payments globally!",
+      "url": "https://stripe.com/",
+      "dependencies": [],
+      "leads_to": []
+    },
+    {
+      "id": 36,
+      "name": "PayPal",
+      "category": "Payment Systems",
+      "icon": "fab fa-paypal",
+      "desc": "Digital payment platform. Secure online money transfers and merchant services!",
+      "url": "https://www.paypal.com/",
+      "dependencies": [],
+      "leads_to": []
+    },
+    {
+      "id": 37,
+      "name": "Solidity",
+      "category": "Blockchain",
+      "icon": "fab fa-ethereum",
+      "desc": "Smart contract programming language. Build decentralized applications on Ethereum!",
+      "url": "https://docs.soliditylang.org/",
+      "dependencies": [],
+      "leads_to": ["Web3.js", "Ethereum"]
+    },
+    {
+      "id": 38,
+      "name": "Web3.js",
+      "category": "Blockchain",
+      "icon": "fas fa-link",
+      "desc": "JavaScript library for Ethereum blockchain. Bridge web apps to decentralized world!",
+      "url": "https://web3js.readthedocs.io/",
+      "dependencies": ["JavaScript"],
+      "leads_to": []
+    },
+    {
+      "id": 39,
+      "name": "TensorFlow",
+      "category": "AI / ML",
+      "icon": "fas fa-brain",
+      "desc": "Open-source machine learning framework. From research to production ML models!",
+      "url": "https://www.tensorflow.org/",
+      "dependencies": ["Python"],
+      "leads_to": ["Keras"]
+    },
+    {
+      "id": 40,
+      "name": "PyTorch",
+      "category": "AI / ML",
+      "icon": "fas fa-fire",
+      "desc": "Dynamic neural network framework. Research-friendly deep learning library!",
+      "url": "https://pytorch.org/",
+      "dependencies": ["Python"],
+      "leads_to": []
+    }
+  ],
+  "categories": [
+    "Frontend",
+    "Backend", 
+    "Database",
+    "APIs",
+    "Authentication",
+    "Cloud & DevOps",
+    "CI/CD",
+    "Version Control",
+    "Deployment",
+    "Payment Systems",
+    "Blockchain",
+    "AI / ML"
+  ]
+}

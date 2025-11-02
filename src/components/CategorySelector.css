@@ -1,0 +1,101 @@
+.category-selector {
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.category-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 255, 218, 0.5) rgba(30, 41, 59, 0.8);
+  padding: 0.5rem 0;
+}
+
+.category-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-scroll-container::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 3px;
+}
+
+.category-scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00ffff, #64ffda);
+  border-radius: 3px;
+}
+
+.category-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #64ffda, #00ffff);
+}
+
+.category-buttons {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  min-width: max-content;
+  padding: 0 1rem;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  border-radius: 25px;
+  color: #cbd5e1;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+
+.category-btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+  border-color: rgba(100, 255, 218, 0.5);
+  color: #64ffda;
+  box-shadow: 0 4px 20px rgba(100, 255, 218, 0.2);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background: linear-gradient(45deg, rgba(100, 255, 218, 0.2), rgba(0, 255, 255, 0.2));
+  border-color: #64ffda;
+  color: #64ffda;
+  box-shadow: 0 6px 25px rgba(100, 255, 218, 0.3);
+  font-weight: 600;
+}
+
+.category-btn i {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.category-btn.active i {
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+@media (max-width: 768px) {
+  .category-buttons {
+    gap: 0.5rem;
+  }
+  
+  .category-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    flex: 1;
+    min-width: calc(50% - 0.25rem);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-btn {
+    min-width: 100%;
+  }
+}
