@@ -22,6 +22,32 @@ body {
   overflow-x: hidden;
 }
 
+/* Design tokens and desktop-focused layout helpers */
+:root{
+  --max-width: 1400px;
+  --pad: 1rem;
+  --grid-gap: 1rem;
+  --card-min: 220px;
+  --card-min-lg: 260px;
+  --card-min-xl: 300px;
+  --nav-height: 64px;
+  --accent: #6C63FF;
+  --bg-dark: #0f172a;
+  --muted: #94a3b8;
+}
+
+/* page container centered and constrained for larger screens */
+.app-container{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--pad) * 1.2);
+}
+
+/* sensible scaling for desktop/laptop font sizes */
+html { font-size: 16px; }
+@media (min-width: 1280px){ html { font-size: 17px; } }
+@media (min-width: 1600px){ html { font-size: 18px; } }
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

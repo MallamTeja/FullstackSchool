@@ -4,12 +4,14 @@
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
+  gap: var(--grid-gap, 2rem);
+  /* allow cards to stretch and fill columns nicely across larger screens */
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-min, 220px), 1fr));
+  max-width: var(--max-width, 1400px);
   margin: 0 auto;
-  padding: 0 2rem;
-  justify-items: center;
+  padding: 0 1rem;
+  justify-items: stretch;
+  align-items: start;
 }
 
 .no-results {
@@ -46,28 +48,30 @@
     gap: 1.5rem;
     padding: 0 1rem;
   }
-  
+
   .no-results {
     padding: 3rem 1rem;
   }
-  
-  .no-results i {
-    font-size: 3rem;
-  }
-  
-  .no-results h3 {
-    font-size: 1.3rem;
-  }
+
+  .no-results i { font-size: 3rem; }
+  .no-results h3 { font-size: 1.3rem; }
 }
 
-@media (min-width: 1200px) {
+/* Laptop screens */
+@media (min-width: 1024px) {
   .tech-grid {
-    grid-template-columns: repeat(4, 1fr);
+    /* larger minimum card width on laptops/desktops; let grid handle spacing */
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-min-lg, 260px), 1fr));
+    gap: calc(var(--grid-gap, 2rem) * 1.25);
+    padding: 0 1.5rem;
   }
 }
 
+/* Large desktop */
 @media (min-width: 1600px) {
   .tech-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-min-xl, 300px), 1fr));
+    gap: calc(var(--grid-gap, 2rem) * 1.5);
+    padding: 0 2rem;
   }
 }

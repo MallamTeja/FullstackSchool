@@ -1,21 +1,30 @@
 .tech-card {
-  perspective: 1000px;
-  width: 280px;
-  height: 200px;
-  margin: 1rem;
+  perspective: 1200px;
+  width: 100%;
+  /* let the grid control card sizing; allow cards to stretch */
+  max-width: none;
+  min-width: 0;
+  margin: 0;
   cursor: pointer;
+  display: flex;
+  align-items: stretch;
+  flex: 1 1 var(--card-min, 220px);
 }
 
 .card-inner {
   position: relative;
   width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
+  min-height: 180px;
+  transition: transform 0.6s cubic-bezier(.2,.9,.3,1), box-shadow 0.25s;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
-.tech-card:hover .card-inner {
-  transform: rotateY(180deg);
+/* Only perform hover-based flip on devices that support hover and fine pointer (desktop/laptop) */
+@media (hover: hover) and (pointer: fine) {
+  .tech-card:hover .card-inner {
+    transform: rotateY(180deg) scale(1.02);
+  }
 }
 
 .card-front,
@@ -25,16 +34,16 @@
   height: 100%;
   backface-visibility: hidden;
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.06);
+  border: 1px solid rgba(0, 255, 255, 0.12);
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9));
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
 }
 
 .card-back {
@@ -43,19 +52,28 @@
 }
 
 .tech-icon {
-  font-size: 3rem;
+  /* responsive icon sizing (font or image) */
+  font-size: clamp(1.6rem, 1.8vw, 2.6rem);
   color: #00ffff;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 16px rgba(0, 255, 255, 0.45);
+}
+
+.tech-icon img {
+  display: inline-block;
+  width: clamp(36px, 4vw, 64px);
+  height: clamp(36px, 4vw, 64px);
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .tech-name {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 1.4rem;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
   font-weight: 600;
   color: #ffffff;
-  margin: 0.5rem 0;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin: 0.4rem 0;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.22);
 }
 
 .tech-category {
@@ -88,14 +106,14 @@
 .learn-more-btn {
   background: linear-gradient(45deg, #00ffff, #64ffda);
   border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
+  padding: 0.7rem 1.25rem;
+  border-radius: 22px;
   color: #0f172a;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   text-transform: uppercase;
@@ -113,17 +131,21 @@
 }
 
 @media (max-width: 768px) {
-  .tech-card {
-    width: 100%;
-    max-width: 300px;
-    margin: 0.5rem auto;
-  }
-  
-  .tech-name {
-    font-size: 1.2rem;
-  }
-  
-  .tech-description p {
-    font-size: 0.9rem;
-  }
+  .tech-card { max-width: 100%; margin: 0.5rem auto; }
+  .card-inner { min-height: 160px; }
+  .tech-name { font-size: 1.1rem; }
+  .tech-description p { font-size: 0.9rem; }
+}
+
+@media (min-width: 1024px) {
+  /* on larger screens give cards a bit more height and spacing */
+  .tech-card { max-width: none; }
+  .card-inner { min-height: 200px; padding: 1.5rem; }
+  .tech-name { font-size: 1.35rem; }
+  .learn-more-btn { padding: 0.8rem 1.4rem; font-size: 0.95rem; }
+}
+
+/* Ensure consistent spacing when cards are within a grid (remove extra outer margins) */
+.tech-grid .tech-card {
+  margin: 0;
 }

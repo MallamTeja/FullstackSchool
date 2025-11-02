@@ -1,0 +1,8 @@
+/* AboutSection */
+.about-section { padding: 3.5rem 0; }
+.about-inner { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; }
+.about-copy h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.about-copy p { color: var(--muted, #94a3b8); margin-bottom: 1rem; }
+.about-list { list-style: none; display: grid; gap: 0.5rem; color: var(--muted); }
+.about-visual .visual-card { background: rgba(30,41,59,0.8); padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 8px 30px rgba(2,6,23,0.6); }
+@media (min-width: 900px) { .about-inner { grid-template-columns: 1fr 360px; } }

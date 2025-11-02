@@ -9,6 +9,10 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(100, 255, 218, 0.5) rgba(30, 41, 59, 0.8);
   padding: 0.5rem 0;
+  scroll-snap-type: x mandatory;
+  /* give a bit of padding so first/last items can center on larger screens */
+  scroll-padding-inline: 1rem;
+  -webkit-overflow-scrolling: touch;
 }
 
 .category-scroll-container::-webkit-scrollbar {
@@ -52,6 +56,8 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   white-space: nowrap;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .category-btn:hover {
@@ -98,4 +104,17 @@
   .category-btn {
     min-width: 100%;
   }
+}
+
+/* Desktop & laptop polish: larger tappable targets and subtle spacing */
+@media (min-width: 1024px) {
+  .category-selector { padding: 0 1.5rem; }
+  .category-buttons { gap: 1rem; padding: 0 1.5rem; }
+  .category-btn { padding: 0.95rem 1.75rem; font-size: 1rem; border-radius: 28px; }
+  /* increase hit target on laptops/desktops */
+  .category-btn { min-height: 48px; }
+}
+
+@media (min-width: 1400px) {
+  .category-btn { padding: 1rem 2rem; font-size: 1.05rem; }
 }
