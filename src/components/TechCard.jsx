@@ -89,7 +89,7 @@ const TechCard = ({ tech }) => {
               className="learn-more-btn"
               onClick={(ev) => { ev.stopPropagation(); openOfficial(); }}
             >
-              <i className="fas fa-external-link-alt"></i>
+              <i className="fas fa-external-link"></i>
               Official Site
             </button>
           </div>

@@ -17,7 +17,7 @@ const Footer = () => {
               <a href="https://github.com/fullstackschool/fullstackschool" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Twitter"><i className="fab fa-x-twitter"></i></a>
               <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
               <a href="#" aria-label="Discord"><i className="fab fa-discord"></i></a>
             </div>

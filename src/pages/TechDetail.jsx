@@ -183,7 +183,7 @@ const TechDetail = () => {
 
       <footer style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
         <a href={tech.url} target="_blank" rel="noopener noreferrer" className="learn-more-btn" style={{ textDecoration: 'none' }}>
-          <i className="fas fa-external-link-alt"></i>
+          <i className="fas fa-external-link"></i>
           Official Site
         </a>
         <Link to="/" className="btn-ghost" style={{ textDecoration: 'none' }}>

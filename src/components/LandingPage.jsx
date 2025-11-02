@@ -280,7 +280,7 @@ const LandingPage = ({ setCurrentPage }) => {
               viewport={{ once: true }}
             >
               <div className="feature-icon">
-                <i className="fas fa-magic"></i>
+                <i className="fas fa-wand-magic-sparkles"></i>
               </div>
               <h3>Flip Card Learning</h3>
               <p>Engaging interactive cards with descriptions, use cases, and official resources</p>
@@ -310,7 +310,7 @@ const LandingPage = ({ setCurrentPage }) => {
               viewport={{ once: true }}
             >
               <div className="feature-icon">
-                <i className="fas fa-mobile-alt"></i>
+                <i className="fas fa-mobile-screen-button"></i>
               </div>
               <h3>Mobile Responsive</h3>
               <p>Learn anywhere, anytime with fully responsive design that works on all devices</p>
@@ -352,7 +352,7 @@ const LandingPage = ({ setCurrentPage }) => {
                   <p>"FullstackSchool saved me months of confusion. The tech tree visualization is genius!"</p>
                 </div>
                 <div className="testimonial-author">
-                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Sarah Chen" />
+                  <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=64ffda&color=0f172a&size=60" alt="Sarah Chen" />
                   <div>
                     <strong>Sarah Chen</strong>
                     <span>Frontend Developer at Meta</span>
@@ -365,7 +365,7 @@ const LandingPage = ({ setCurrentPage }) => {
                   <p>"Finally, a clear roadmap for learning backend technologies. No more tutorial hell!"</p>
                 </div>
                 <div className="testimonial-author">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Mike Rodriguez" />
+                  <img src="https://ui-avatars.com/api/?name=Mike+Rodriguez&background=00ffff&color=0f172a&size=60" alt="Mike Rodriguez" />
                   <div>
                     <strong>Mike Rodriguez</strong>
                     <span>Full Stack Developer</span>
@@ -378,7 +378,7 @@ const LandingPage = ({ setCurrentPage }) => {
                   <p>"The interactive cards make learning new tech actually fun. Highly recommend!"</p>
                 </div>
                 <div className="testimonial-author">
-                  <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Emily Johnson" />
+                  <img src="https://ui-avatars.com/api/?name=Emily+Johnson&background=1db954&color=ffffff&size=60" alt="Emily Johnson" />
                   <div>
                     <strong>Emily Johnson</strong>
                     <span>DevOps Engineer</span>

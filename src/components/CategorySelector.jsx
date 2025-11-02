@@ -42,11 +42,11 @@ const CategorySelector = ({ categories, selectedCategory, setSelectedCategory })
 
 const getCategoryIcon = (category) => {
   const iconMap = {
-    'Frontend': 'fas fa-desktop',
+    'Frontend': 'fas fa-display',
     'Backend': 'fas fa-server',
     'Database': 'fas fa-database',
-    'APIs': 'fas fa-exchange-alt',
-    'Authentication': 'fas fa-shield-alt',
+    'APIs': 'fas fa-arrows-rotate',
+    'Authentication': 'fas fa-shield-halved',
     'Cloud & DevOps': 'fas fa-cloud',
     'CI/CD': 'fas fa-cogs',
     'Version Control': 'fab fa-git-alt',

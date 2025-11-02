@@ -11,7 +11,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
   }, [currentPage]);
   const navItems = [
     { key: 'home', label: 'FullstackSchool', icon: 'fas fa-code' },
-    { key: 'frontend', label: 'Frontend', icon: 'fas fa-desktop' },
+    { key: 'frontend', label: 'Frontend', icon: 'fas fa-display' },
     { key: 'backend', label: 'Backend', icon: 'fas fa-server' },
     { key: 'database', label: 'Database', icon: 'fas fa-database' },
     { key: 'infrastructure', label: 'Infrastructure', icon: 'fas fa-cloud' },
