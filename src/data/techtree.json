@@ -170,22 +170,7 @@
       "position": { "x": 520, "y": 620 },
       "color": "#6f42c1"
     },
-    {
-      "id": "prometheus",
-      "name": "Prometheus",
-      "category": "Observability",
-      "level": 6,
-      "position": { "x": 720, "y": 620 },
-      "color": "#e6522c"
-    },
-    {
-      "id": "grafana",
-      "name": "Grafana",
-      "category": "Observability",
-      "level": 6,
-      "position": { "x": 820, "y": 680 },
-      "color": "#f66c00"
-    },
+
     {
       "id": "s3",
       "name": "S3",
@@ -425,18 +410,7 @@
       "target": "websockets",
       "type": "signaling"
     },
-    {
-      "id": "express-kafka",
-      "source": "express",
-      "target": "kafka",
-      "type": "integration"
-    },
-    {
-      "id": "express-rabbitmq",
-      "source": "express",
-      "target": "rabbitmq",
-      "type": "integration"
-    },
+
     {
       "id": "docker-kubernetes",
       "source": "docker",
@@ -467,18 +441,7 @@
       "target": "kubernetes",
       "type": "ci-cd"
     },
-    {
-      "id": "prometheus-kubernetes",
-      "source": "prometheus",
-      "target": "kubernetes",
-      "type": "monitoring"
-    },
-    {
-      "id": "prometheus-grafana",
-      "source": "prometheus",
-      "target": "grafana",
-      "type": "visualization"
-    },
+
     {
       "id": "aws-s3",
       "source": "aws",
@@ -521,12 +484,7 @@
       "target": "postgresql",
       "type": "search"
     },
-    {
-      "id": "kafka-streams",
-      "source": "kafka",
-      "target": "elasticsearch",
-      "type": "ingest"
-    },
+
     {
       "id": "solidity-web3",
       "source": "solidity",

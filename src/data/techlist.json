@@ -593,7 +593,6 @@
       "url": "https://martinfowler.com/eaaDev/EventSourcing.html",
       "dependencies": [],
       "leads_to": [
-        "Kafka",
         "CQRS"
       ],
       "iconUrl": "https://via.placeholder.com/48"
