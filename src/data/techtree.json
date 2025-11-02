@@ -129,22 +129,7 @@
       "position": { "x": 700, "y": 300 },
       "color": "#1283c5"
     },
-    {
-      "id": "kafka",
-      "name": "Kafka",
-      "category": "Messaging",
-      "level": 5,
-      "position": { "x": 900, "y": 300 },
-      "color": "#231f20"
-    },
-    {
-      "id": "rabbitmq",
-      "name": "RabbitMQ",
-      "category": "Messaging",
-      "level": 5,
-      "position": { "x": 900, "y": 380 },
-      "color": "#ff6600"
-    },
+
     {
       "id": "kubernetes",
       "name": "Kubernetes",

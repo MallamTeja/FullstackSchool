@@ -717,19 +717,7 @@
       ],
       "iconUrl": "https://via.placeholder.com/48"
     },
-    {
-      "id": 59,
-      "name": "Serverless Functions",
-      "category": "Serverless",
-      "desc": "Tiny single-purpose functions (AWS Lambda, Vercel/Netlify functions) that run on demand. Great for scaling APIs without managing servers.",
-      "url": "https://en.wikipedia.org/wiki/Serverless_computing",
-      "dependencies": [],
-      "leads_to": [
-        "AWS Lambda",
-        "Vercel"
-      ],
-      "iconUrl": "https://via.placeholder.com/48"
-    },
+
     {
       "id": 60,
       "name": "Hugging Face",
@@ -761,9 +749,6 @@
     "AI / ML",
     "Realtime",
     "System Design",
-    "Observability",
-    "Messaging",
-    "Testing",
-    "Serverless"
+    "Testing"
   ]
 }
