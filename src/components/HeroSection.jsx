@@ -17,27 +17,27 @@ const HeroSection = ({ setCurrentPage }) => {
           <div className="hero-text-center">
             <motion.h1 
               className="hero-title"
-              initial={{ opacity: 0, y: -100 }}
+              initial={{ opacity: 0, y: -150 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.8, 
+                duration: 0.5, 
                 type: "spring", 
-                stiffness: 120, 
-                damping: 10 
+                stiffness: 300, 
+                damping: 20 
               }}
             >
               Build Projects Like a Pro
             </motion.h1>
             <motion.p 
               className="microcopy"
-              initial={{ opacity: 0, y: -80 }}
+              initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.7, 
+                duration: 0.4, 
                 type: "spring", 
-                stiffness: 100, 
-                damping: 12,
-                delay: 0.2
+                stiffness: 280, 
+                damping: 18,
+                delay: 0.1
               }}
             >
               Where confused devs get unconfused. (Yes, really.)
@@ -49,14 +49,14 @@ const HeroSection = ({ setCurrentPage }) => {
             <div className="professional-stacks-grid">
               <motion.div 
                 className="professional-stack-card"
-                initial={{ opacity: 0, y: 120 }}
+                initial={{ opacity: 0, y: 150 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.9, 
+                  duration: 0.6, 
                   type: "spring", 
-                  stiffness: 80, 
-                  damping: 15,
-                  delay: 0.5
+                  stiffness: 200, 
+                  damping: 16,
+                  delay: 0.3
                 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
@@ -70,14 +70,14 @@ const HeroSection = ({ setCurrentPage }) => {
 
               <motion.div 
                 className="professional-stack-card"
-                initial={{ opacity: 0, y: 120 }}
+                initial={{ opacity: 0, y: 150 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.9, 
+                  duration: 0.6, 
                   type: "spring", 
-                  stiffness: 80, 
-                  damping: 15,
-                  delay: 0.6
+                  stiffness: 200, 
+                  damping: 16,
+                  delay: 0.4
                 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
@@ -91,14 +91,14 @@ const HeroSection = ({ setCurrentPage }) => {
 
               <motion.div 
                 className="professional-stack-card"
-                initial={{ opacity: 0, y: 120 }}
+                initial={{ opacity: 0, y: 150 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.9, 
+                  duration: 0.6, 
                   type: "spring", 
-                  stiffness: 80, 
-                  damping: 15,
-                  delay: 0.7
+                  stiffness: 200, 
+                  damping: 16,
+                  delay: 0.5
                 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
@@ -112,14 +112,14 @@ const HeroSection = ({ setCurrentPage }) => {
 
               <motion.div 
                 className="professional-stack-card"
-                initial={{ opacity: 0, y: 120 }}
+                initial={{ opacity: 0, y: 150 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.9, 
+                  duration: 0.6, 
                   type: "spring", 
-                  stiffness: 80, 
-                  damping: 15,
-                  delay: 0.8
+                  stiffness: 200, 
+                  damping: 16,
+                  delay: 0.6
                 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
@@ -144,8 +144,8 @@ const HeroSection = ({ setCurrentPage }) => {
                 Take a Look
               </motion.button>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

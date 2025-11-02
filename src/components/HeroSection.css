@@ -46,6 +46,8 @@
   color: var(--muted, #94a3b8); 
   font-size: 0.7rem; 
   text-align: center;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 @media (min-width: 768px) {
@@ -145,6 +147,8 @@
   line-height: 1.08;
   text-align: center;
   font-weight: 800;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 .hero-desc {
@@ -378,6 +382,9 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .professional-stack-card::before {
