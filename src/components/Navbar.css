@@ -30,6 +30,8 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-main, #e6eef8);
+  flex-shrink: 0;
+  min-width: 200px;
 }
 
 .nav-brand > div {
@@ -145,8 +147,16 @@
     display: block;
   }
   
+  .nav-brand {
+    font-size: 1.2rem;
+  }
+  
   .nav-brand span {
-    display: none;
+    display: inline;
+  }
+  
+  .tagline {
+    font-size: 0.7rem !important;
   }
 }
 

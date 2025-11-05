@@ -26,10 +26,10 @@ const Footer = () => {
           <div className="footer-links">
             <div className="link-group">
               <h4>Learn</h4>
-              <a href="#frontend">Frontend</a>
-              <a href="#backend">Backend</a>
-              <a href="#database">Database</a>
-              <a href="#infrastructure">Infrastructure</a>
+              <a href="#techtree">Tech Tree</a>
+              <a href="#skills">Skill Categories</a>
+              <a href="#roadmap">Learning Paths</a>
+              <a href="#resources">Resources</a>
             </div>
             
             <div className="link-group">
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2025 FullstackSchool. Made with ❤️ for developers worldwide.</p>
+          <p>&copy; 2025 FullstackSchool. Made with ❤️LOVE for developers worldwide.</p>
         </div>
       </div>
     </footer>

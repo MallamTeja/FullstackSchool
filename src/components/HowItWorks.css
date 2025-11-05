@@ -9,12 +9,16 @@
 .step-body p { font-size: 0.85rem; }
 .lead { color: var(--muted,#94a3b8); font-size: 0.9rem; }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .steps-grid { grid-template-columns: repeat(2,1fr); }
 }
 
-@media (min-width: 1200px) {
-  .steps-grid { grid-template-columns: repeat(4,1fr); }
-  .step-card { flex-direction: column; align-items: flex-start; padding: 1rem; }
-  .step-num { width:38px; height:38px; border-radius:10px; font-size: 1rem; }
+@media (min-width: 768px) {
+  .steps-grid { grid-template-columns: repeat(3,1fr); }
+}
+
+@media (min-width: 1024px) {
+  .steps-grid { grid-template-columns: repeat(5,1fr); }
+  .step-card { flex-direction: column; align-items: flex-start; padding: 1.2rem; }
+  .step-num { width:38px; height:38px; border-radius:10px; font-size: 1rem; margin-bottom: 0.5rem; }
 }

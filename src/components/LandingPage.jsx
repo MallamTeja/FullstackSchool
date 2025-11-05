@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import './LandingPage.css';
 import HeroSection from './HeroSection';
 import HowItWorks from './HowItWorks';
+import Footer from './Footer';
 
 const LandingPage = ({ setCurrentPage }) => {
   const [email, setEmail] = useState('');
@@ -133,7 +134,7 @@ const LandingPage = ({ setCurrentPage }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              onClick={() => handleSkillNavigation('frontend')}
+              onClick={() => handleSkillNavigation('techtree')}
             >
               <div className="skill-icon">
                 <i className="fab fa-react"></i>
@@ -146,7 +147,7 @@ const LandingPage = ({ setCurrentPage }) => {
                 <span>Angular</span>
                 <span>TypeScript</span>
               </div>
-              <button className="skill-explore-btn">Explore Frontend</button>
+              <button className="skill-explore-btn">Explore Tech Tree</button>
             </motion.div>
 
             <motion.div 
@@ -157,7 +158,7 @@ const LandingPage = ({ setCurrentPage }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              onClick={() => handleSkillNavigation('backend')}
+              onClick={() => handleSkillNavigation('techtree')}
             >
               <div className="skill-icon">
                 <i className="fas fa-server"></i>
@@ -170,7 +171,7 @@ const LandingPage = ({ setCurrentPage }) => {
                 <span>Java</span>
                 <span>Express.js</span>
               </div>
-              <button className="skill-explore-btn">Explore Backend</button>
+              <button className="skill-explore-btn">Explore Tech Tree</button>
             </motion.div>
 
             <motion.div 
@@ -181,7 +182,7 @@ const LandingPage = ({ setCurrentPage }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              onClick={() => handleSkillNavigation('database')}
+              onClick={() => handleSkillNavigation('techtree')}
             >
               <div className="skill-icon">
                 <i className="fas fa-database"></i>
@@ -194,32 +195,10 @@ const LandingPage = ({ setCurrentPage }) => {
                 <span>Redis</span>
                 <span>MySQL</span>
               </div>
-              <button className="skill-explore-btn">Explore Database</button>
+              <button className="skill-explore-btn">Explore Tech Tree</button>
             </motion.div>
 
-            <motion.div 
-              className="skill-category-card"
-              whileHover={{ scale: 1.02, y: -5 }}
-              whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              onClick={() => handleSkillNavigation('infrastructure')}
-            >
-              <div className="skill-icon">
-                <i className="fas fa-cloud"></i>
-              </div>
-              <h3>Infrastructure & DevOps</h3>
-              <p>AWS, Docker, Kubernetes, and deployment tools</p>
-              <div className="skill-tech-list">
-                <span>AWS</span>
-                <span>Docker</span>
-                <span>Kubernetes</span>
-                <span>CI/CD</span>
-              </div>
-              <button className="skill-explore-btn">Explore Infrastructure</button>
-            </motion.div>
+
           </div>
         </div>
       </section>
@@ -453,6 +432,8 @@ const LandingPage = ({ setCurrentPage }) => {
           </motion.div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };

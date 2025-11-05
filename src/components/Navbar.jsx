@@ -11,10 +11,6 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
   }, [currentPage]);
   const navItems = [
     { key: 'home', label: 'FullstackSchool', icon: 'fas fa-code' },
-    { key: 'frontend', label: 'Frontend', icon: 'fas fa-display' },
-    { key: 'backend', label: 'Backend', icon: 'fas fa-server' },
-    { key: 'database', label: 'Database', icon: 'fas fa-database' },
-    { key: 'infrastructure', label: 'Infrastructure', icon: 'fas fa-cloud' },
     { key: 'techtree', label: 'Tech Tree', icon: 'fas fa-project-diagram' }
   ];
 
@@ -34,25 +30,23 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
           <small className="tagline">Where confused devs get unconfused</small>
         </div>
         
-        {currentPage !== 'home' && (
-          <div className="nav-menu">
-            {navItems.slice(1).map((item) => (
-              <motion.div
-                key={item.key}
-                className={`nav-item ${currentPage === item.key ? 'active' : ''}`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setCurrentPage(item.key)}
-                role="link"
-                tabIndex={0}
-                aria-label={item.label}
-              >
-                <i className={item.icon}></i>
-                <span>{item.label}</span>
-              </motion.div>
-            ))}
-          </div>
-        )}
+        <div className="nav-menu">
+          {currentPage !== 'home' && navItems.slice(1).map((item) => (
+            <motion.div
+              key={item.key}
+              className={`nav-item ${currentPage === item.key ? 'active' : ''}`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setCurrentPage(item.key)}
+              role="link"
+              tabIndex={0}
+              aria-label={item.label}
+            >
+              <i className={item.icon}></i>
+              <span>{item.label}</span>
+            </motion.div>
+          ))}
+        </div>
         
         <div className="nav-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle menu">
           <i className="fas fa-bars"></i>
@@ -61,7 +55,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
 
       {/* Mobile menu overlay */}
       <div className={`nav-mobile ${open ? 'open' : ''}`} role="menu" aria-hidden={!open}>
-        {(currentPage === 'home' ? navItems.slice(0,1) : navItems).map((item) => (
+        {navItems.map((item) => (
           <div key={item.key} className={`nav-mobile-item ${currentPage === item.key ? 'active' : ''}`} onClick={() => setCurrentPage(item.key)} role="menuitem" tabIndex={0}>
             {item.icon && <i className={item.icon} />}
             <span>{item.label}</span>
