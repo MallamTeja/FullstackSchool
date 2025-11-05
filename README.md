@@ -31,7 +31,7 @@ A cutting-edge, interactive learning platform that transforms how developers lea
 ## 📋 Table of Contents
 - [✨ Features](#-features)
 - [🎯 Demo](#-demo)
-- [🛠️ Tech Stack](#️-tech-stack)
+- [🛠️ Tech Stack](#-tech-stack)
 - [📁 Project Structure](#-project-structure)
 - [🚀 Getting Started](#-getting-started)
 - [📜 Available Scripts](#-available-scripts)
