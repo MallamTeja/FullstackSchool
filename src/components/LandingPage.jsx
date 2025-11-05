@@ -29,6 +29,85 @@ const LandingPage = ({ setCurrentPage }) => {
   return (
     <div className="landing-page">
       <HeroSection setCurrentPage={setCurrentPage} />
+      
+      {/* Search Section */}
+      <section className="search-section">
+        <div className="container">
+          <div className="search-content">
+            <motion.div 
+              className="search-box-main"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <i className="fas fa-search search-icon-main"></i>
+              <input
+                type="text"
+                className="search-input-main"
+                placeholder="Search technologies... (e.g., React, Python, Docker)"
+                onClick={() => setCurrentPage('techtree')}
+                readOnly
+              />
+            </motion.div>
+            
+            {/* Category Buttons */}
+            <motion.div 
+              className="category-buttons-main"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <div className="category-scroll-main">
+                <button 
+                  className="category-btn-main active"
+                  onClick={() => setCurrentPage('techtree')}
+                >
+                  <i className="fas fa-th"></i>
+                  <span>All Technologies</span>
+                </button>
+                <button 
+                  className="category-btn-main"
+                  onClick={() => setCurrentPage('techtree')}
+                >
+                  <i className="fab fa-react"></i>
+                  <span>Frontend</span>
+                </button>
+                <button 
+                  className="category-btn-main"
+                  onClick={() => setCurrentPage('techtree')}
+                >
+                  <i className="fas fa-server"></i>
+                  <span>Backend</span>
+                </button>
+                <button 
+                  className="category-btn-main"
+                  onClick={() => setCurrentPage('techtree')}
+                >
+                  <i className="fas fa-database"></i>
+                  <span>Database</span>
+                </button>
+                <button 
+                  className="category-btn-main"
+                  onClick={() => setCurrentPage('techtree')}
+                >
+                  <i className="fas fa-tools"></i>
+                  <span>DevOps</span>
+                </button>
+                <button 
+                  className="category-btn-main"
+                  onClick={() => setCurrentPage('techtree')}
+                >
+                  <i className="fab fa-aws"></i>
+                  <span>AWS</span>
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
       <HowItWorks />
 
       {/* Problem Section */}
@@ -37,9 +116,9 @@ const LandingPage = ({ setCurrentPage }) => {
         <div className="container">
           <motion.div 
             className="problem-content"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             viewport={{ once: true }}
           >
             <h2>Tired of Getting Lost in the Tech Learning Maze?</h2>
@@ -70,9 +149,9 @@ const LandingPage = ({ setCurrentPage }) => {
         <div className="container">
           <motion.div 
             className="solution-content"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             viewport={{ once: true }}
           >
             <h2>FullstackSchool Shows You the Exact Learning Path</h2>
@@ -114,25 +193,23 @@ const LandingPage = ({ setCurrentPage }) => {
       {/* Skills Overview Section */}
       <section id="skills" className="skills-section">
         <div className="container">
-          <motion.div 
-            className="skills-header"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="skills-header">
             <h2>Explore Technologies by Category</h2>
             <p>Choose your learning path and discover the technologies that power modern applications</p>
-          </motion.div>
+          </div>
           
           <div className="skills-grid">
             <motion.div 
               className="skill-category-card"
-              whileHover={{ scale: 1.02, y: -5 }}
-              whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -8,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              whileTap={{ scale: 0.97 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.02, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
               onClick={() => handleSkillNavigation('techtree')}
             >
@@ -152,11 +229,15 @@ const LandingPage = ({ setCurrentPage }) => {
 
             <motion.div 
               className="skill-category-card"
-              whileHover={{ scale: 1.02, y: -5 }}
-              whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -8,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              whileTap={{ scale: 0.97 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.04, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
               onClick={() => handleSkillNavigation('techtree')}
             >
@@ -176,11 +257,15 @@ const LandingPage = ({ setCurrentPage }) => {
 
             <motion.div 
               className="skill-category-card"
-              whileHover={{ scale: 1.02, y: -5 }}
-              whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -8,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              whileTap={{ scale: 0.97 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.06, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
               onClick={() => handleSkillNavigation('techtree')}
             >
@@ -207,23 +292,21 @@ const LandingPage = ({ setCurrentPage }) => {
       <section id="features" className="features-section">
         <div className="section-glow" aria-hidden="true"></div>
         <div className="container">
-          <motion.div 
-            className="features-header"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="features-header">
             <h2>Everything You Need to Master Modern Development</h2>
-          </motion.div>
+          </div>
           
           <div className="features-grid">
             <motion.div 
               className="feature-card"
-              whileHover={{ scale: 1.02 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -6,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.02, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
               <div className="feature-icon">
@@ -235,10 +318,14 @@ const LandingPage = ({ setCurrentPage }) => {
 
             <motion.div 
               className="feature-card"
-              whileHover={{ scale: 1.02 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -6,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.04, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
               <div className="feature-icon">
@@ -250,10 +337,14 @@ const LandingPage = ({ setCurrentPage }) => {
 
             <motion.div 
               className="feature-card"
-              whileHover={{ scale: 1.02 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -6,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.06, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
               <div className="feature-icon">
@@ -265,10 +356,14 @@ const LandingPage = ({ setCurrentPage }) => {
 
             <motion.div 
               className="feature-card"
-              whileHover={{ scale: 1.02 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -6,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
               <div className="feature-icon">
@@ -280,10 +375,14 @@ const LandingPage = ({ setCurrentPage }) => {
 
             <motion.div 
               className="feature-card"
-              whileHover={{ scale: 1.02 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -6,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
               <div className="feature-icon">
@@ -295,10 +394,14 @@ const LandingPage = ({ setCurrentPage }) => {
 
             <motion.div 
               className="feature-card"
-              whileHover={{ scale: 1.02 }}
-              initial={{ opacity: 0, y: 30 }}
+              whileHover={{ 
+                scale: 1.03, 
+                y: -6,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
               <div className="feature-icon">
@@ -316,9 +419,9 @@ const LandingPage = ({ setCurrentPage }) => {
         <div className="container">
           <motion.div 
             className="social-proof-content"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             viewport={{ once: true }}
           >
             <h2>Trusted by Developers Worldwide</h2>
@@ -393,9 +496,9 @@ const LandingPage = ({ setCurrentPage }) => {
         <div className="container">
           <motion.div 
             className="cta-content"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             viewport={{ once: true }}
           >
             <h2>Ready to Accelerate Your Development Journey?</h2>

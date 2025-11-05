@@ -11,6 +11,7 @@ import ReactFlow, {
 import { motion } from 'framer-motion';
 import 'reactflow/dist/style.css';
 import treeData from '../data/techtree.json';
+import CategoryButtons from './CategoryButtons';
 import './TechTree.css';
 
 const TechTree = () => {
@@ -199,22 +200,6 @@ const TechTree = () => {
 
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
-  const categories = [
-    'All', 
-    'Frontend', 
-    'Backend', 
-    'Database', 
-    'DevOps', 
-    'AWS',
-    'Messaging',
-    'CI/CD',
-    'Observability',
-    'Realtime',
-    'Blockchain',
-    'AI / ML',
-    'Deployment'
-  ];
-
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     const relatedNodeIds = getRelatedNodes(category);
@@ -294,57 +279,19 @@ const TechTree = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -30 }}
-      transition={{ duration: 0.5 }}
-      style={{ paddingTop: '90px', minHeight: '100vh' }}
-    >
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="page-header"
-          style={{ textAlign: 'center', padding: '2rem 0' }}
-        >
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: '#ffffff' }}>
-            Technology Dependency Tree
-          </h1>
-          <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: '600px', margin: '0 auto 1rem' }}>
-            Visualize how technologies connect and build upon each other in modern development
-          </p>
-          <div style={{ 
-            background: 'rgba(0, 255, 255, 0.1)', 
-            border: '1px solid rgba(0, 255, 255, 0.3)', 
-            borderRadius: '8px', 
-            padding: '0.8rem 1.5rem', 
-            margin: '0 auto 2rem',
-            maxWidth: '500px',
-            fontSize: '0.9rem',
-            color: '#64ffda'
-          }}>
-            💡 <strong>Organized View:</strong> Technologies are now grouped by category with improved spacing and visual hierarchy
-          </div>
-        </motion.div>
-
-        {/* Category Filter */}
-        <div className="tree-controls">
-          <div className="category-buttons">
-            {categories.map((category) => (
-              <motion.button
-                key={category}
-                className={`tree-category-btn ${selectedCategory === category ? 'active' : ''}`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => handleCategoryChange(category)}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </div>
-        </div>
+    <>
+      <CategoryButtons 
+        selectedCategory={selectedCategory} 
+        onCategoryChange={handleCategoryChange} 
+      />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        transition={{ duration: 0.5 }}
+        style={{ paddingTop: '140px', minHeight: '100vh' }}
+      >
+        <div className="container">
 
         {/* React Flow Visualization */}
         <div className="tech-tree-container">
@@ -456,6 +403,7 @@ const TechTree = () => {
         </motion.div>
       </div>
     </motion.div>
+    </>
   );
 };
 

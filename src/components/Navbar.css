@@ -11,13 +11,14 @@
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 70px;
+  gap: 2rem;
 }
 
 .nav-brand {
@@ -94,6 +95,78 @@
   font-size: 1.1rem;
 }
 
+/* Search Bar in Navbar */
+.nav-search {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+}
+
+.nav-search-box {
+  position: relative;
+  width: 100%;
+}
+
+.nav-search-input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.8rem;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 25px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-search-input::placeholder {
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.nav-search-input:focus {
+  box-shadow: 0 0 0 3px rgba(0,255,255,0.1);
+  border-color: rgba(0,255,255,0.3);
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64ffda;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.nav-clear-search {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef4444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.7rem;
+}
+
+.nav-clear-search:hover {
+  background: rgba(239, 68, 68, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
 .nav-toggle {
   display: none;
   font-size: 1.5rem;
@@ -120,6 +193,12 @@
   box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
+.nav-mobile-search {
+  padding: 0.5rem 0 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 0.5rem;
+}
+
 .nav-mobile-item {
   display: flex;
   align-items: center;
@@ -137,9 +216,14 @@
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 1rem;
+    gap: 1rem;
   }
   
   .nav-menu {
+    display: none;
+  }
+  
+  .nav-search {
     display: none;
   }
   

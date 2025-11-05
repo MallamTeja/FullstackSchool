@@ -17,27 +17,24 @@ const HeroSection = ({ setCurrentPage }) => {
           <div className="hero-text-center">
             <motion.h1 
               className="hero-title"
-              initial={{ opacity: 0, y: -150 }}
+              initial={{ opacity: 0, y: -40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.5, 
-                type: "spring", 
-                stiffness: 300, 
-                damping: 20 
+                duration: 0.6,
+                ease: [0.25, 0.46, 0.45, 0.94],
+                delay: 0.1
               }}
             >
               Build Projects Like a Pro
             </motion.h1>
             <motion.p 
               className="microcopy"
-              initial={{ opacity: 0, y: -100 }}
+              initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.4, 
-                type: "spring", 
-                stiffness: 280, 
-                damping: 18,
-                delay: 0.1
+                duration: 0.5,
+                ease: [0.25, 0.46, 0.45, 0.94],
+                delay: 0.2
               }}
             >
               Where confused devs get unconfused.
@@ -49,16 +46,18 @@ const HeroSection = ({ setCurrentPage }) => {
             <div className="professional-stacks-grid">
               <motion.div 
                 className="professional-stack-card"
-                initial={{ opacity: 0, y: 150 }}
+                initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.6, 
-                  type: "spring", 
-                  stiffness: 200, 
-                  damping: 16,
+                  duration: 0.6,
+                  ease: [0.25, 0.46, 0.45, 0.94],
                   delay: 0.3
                 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ 
+                  y: -8, 
+                  scale: 1.03,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
               >
                 <div className="stack-icon mern">
                   <i className="fab fa-node-js"></i>
@@ -70,16 +69,18 @@ const HeroSection = ({ setCurrentPage }) => {
 
               <motion.div 
                 className="professional-stack-card"
-                initial={{ opacity: 0, y: 150 }}
+                initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.6, 
-                  type: "spring", 
-                  stiffness: 200, 
-                  damping: 16,
-                  delay: 0.4
+                  duration: 0.6,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                  delay: 0.35
                 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ 
+                  y: -8, 
+                  scale: 1.03,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
               >
                 <div className="stack-icon mean">
                   <i className="fab fa-angular"></i>
@@ -91,16 +92,18 @@ const HeroSection = ({ setCurrentPage }) => {
 
               <motion.div 
                 className="professional-stack-card"
-                initial={{ opacity: 0, y: 150 }}
+                initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.6, 
-                  type: "spring", 
-                  stiffness: 200, 
-                  damping: 16,
-                  delay: 0.5
+                  duration: 0.6,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                  delay: 0.4
                 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ 
+                  y: -8, 
+                  scale: 1.03,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
               >
                 <div className="stack-icon java">
                   <i className="fab fa-java"></i>
@@ -112,16 +115,18 @@ const HeroSection = ({ setCurrentPage }) => {
 
               <motion.div 
                 className="professional-stack-card"
-                initial={{ opacity: 0, y: 150 }}
+                initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.6, 
-                  type: "spring", 
-                  stiffness: 200, 
-                  damping: 16,
-                  delay: 0.6
+                  duration: 0.6,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                  delay: 0.45
                 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ 
+                  y: -8, 
+                  scale: 1.03,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
               >
                 <div className="stack-icon lamp">
                   <i className="fab fa-php"></i>
@@ -133,17 +138,30 @@ const HeroSection = ({ setCurrentPage }) => {
             </div>
 
             {/* CTA Button moved under tech stacks */}
-            <div className="hero-ctas-bottom">
+            <motion.div 
+              className="hero-ctas-bottom"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.6,
+                ease: [0.25, 0.46, 0.45, 0.94],
+                delay: 0.5
+              }}
+            >
               <motion.button
                 className="btn btn-primary"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -3,
+                  transition: { duration: 0.2, ease: "easeOut" }
+                }}
+                whileTap={{ scale: 0.95 }}
                 onClick={handleCTA}
                 aria-label="Explore Frontend"
               >
                 Take a Look
               </motion.button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

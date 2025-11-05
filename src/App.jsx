@@ -105,15 +105,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        {/* Global search available on all pages except home */}
-        {currentPage !== 'home' && (
-          <div style={{ paddingTop: '80px' }}>
-            <div className="container">
-              <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            </div>
-          </div>
-        )}
+        <Navbar 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage} 
+          searchTerm={searchTerm} 
+          setSearchTerm={setSearchTerm} 
+        />
 
         <Routes>
           <Route path="/" element={
